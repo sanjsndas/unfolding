@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Disclaimer · Unfolding Garden Life</title>
+  <meta name="description" content="Disclaimer for Unfolding Garden Life — general information, affiliate disclosure, and liability notice.">
+  <!-- Fonts & reset -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martel:wght@400;600;700;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f6f2eb;
+      color: #1e2b2c;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      padding: 0 1.5rem;
+    }
+
+    .site-wrap {
+      max-width: 1320px;
+      margin: 0 auto;
+      background: #fcf9f5;
+      box-shadow: 0 20px 60px rgba(30, 43, 44, 0.04);
+      padding: 0 1.8rem 3rem;
+    }
+
+    /* typography */
+    h1, h2, h3, h4, .logo, .nav-link, .article-title, .section-label {
+      font-family: 'Martel', serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .display-heading {
+      font-family: 'Martel', serif;
+      font-weight: 900;
+      font-size: clamp(2.6rem, 8vw, 4.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #1b2f2b;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #6d7d6b;
+      border-bottom: 2px solid #d9d0c4;
+      padding-bottom: 0.3rem;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+
+    /* navigation */
+    .nav-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 0 0.5rem;
+      border-bottom: 1px solid #e2d9cd;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #1e3a2b;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .logo span {
+      background: #3d5e3e;
+      color: #f2eee7;
+      font-size: 1rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 40px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 1.8rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #2b3f32;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+      padding-bottom: 0.2rem;
+    }
+    .nav-links a:hover {
+      border-bottom-color: #6f8f6b;
+      color: #17331e;
+    }
+
+    /* footer */
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-top: 4rem;
+      padding-top: 2.5rem;
+      border-top: 2px solid #ded5c7;
+    }
+    .footer-col p {
+      color: #435a41;
+      font-size: 0.95rem;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-family: 'Martel', serif;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+    }
+    .footer-col a {
+      display: block;
+      color: #3b553b;
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 0.15rem 0;
+    }
+    .footer-col a:hover {
+      color: #1d311d;
+    }
+    .footer-legal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.8rem;
+      font-size: 0.8rem;
+      margin-top: 2.2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd2c3;
+      color: #4d6249;
+    }
+
+    /* DISCLAIMER PAGE SPECIFIC */
+    .disclaimer-hero {
+      background: #dfd8cc;
+      border-radius: 20px;
+      padding: 2.5rem 2.8rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .disclaimer-content {
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    .disclaimer-content h2 {
+      font-family: 'Martel', serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-top: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #1b2f2b;
+    }
+
+    .disclaimer-content h2:first-of-type {
+      margin-top: 0;
+    }
+
+    .disclaimer-content h3 {
+      font-family: 'Martel', serif;
+      font-weight: 600;
+      font-size: 1.2rem;
+      margin-top: 1.8rem;
+      margin-bottom: 0.3rem;
+      color: #2a452a;
+    }
+
+    .disclaimer-content p {
+      margin: 0.8rem 0;
+      color: #2d4030;
+    }
+
+    .disclaimer-content ul {
+      margin: 0.5rem 0 1rem 1.8rem;
+      color: #2d4030;
+    }
+
+    .disclaimer-content li {
+      margin: 0.3rem 0;
+    }
+
+    .disclaimer-content .highlight-box {
+      background: #f4efe8;
+      border-left: 4px solid #6f8f6b;
+      padding: 1.2rem 1.8rem;
+      border-radius: 8px;
+      margin: 1.5rem 0;
+    }
+
+    .disclaimer-content .highlight-box strong {
+      color: #1d3a1d;
+    }
+
+    .disclaimer-content .divider {
+      height: 2px;
+      background: #e2d9cd;
+      margin: 2.5rem 0;
+    }
+
+    .disclaimer-content .last-updated {
+      font-size: 0.85rem;
+      color: #5f775c;
+      font-style: italic;
+      margin-top: 0.2rem;
+    }
+
+    .disclaimer-content a {
+      color: #3d6b3a;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .disclaimer-content a:hover {
+      color: #1c401c;
+    }
+
+    @media (max-width: 860px) {
+      .nav-wrap { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .site-wrap { padding: 0 1rem 2rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .disclaimer-hero { padding: 1.8rem; }
+    }
+    @media (max-width: 540px) {
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+
+    .mt-2 { margin-top: 2rem; }
+    .mb-1 { margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+<div class="site-wrap">
+
+  <!-- NAVIGATION (identical to main, with disclaimer active) -->
+  <nav class="nav-wrap">
+    <a href="#" class="logo">🌿 Unfolding<span>Garden Life</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+      <a href="disclaimer.html" style="border-bottom-color:#6f8f6b;">Disclaimer</a>
+      <a href="categories.html">Categories</a>
+    </div>
+  </nav>
+
+  <!-- DISCLAIMER HERO -->
+  <div class="disclaimer-hero">
+    <span class="section-label" style="border-bottom-color:#9b8c78;">⚖️ transparency & responsibility</span>
+    <h1 class="display-heading" style="font-size: clamp(2.2rem, 6vw, 3.8rem);">Disclaimer</h1>
+    <p style="font-size:1.2rem; max-width:600px; margin:0.8rem 0 0; color:#2f452d;">General information, affiliate disclosure, and liability notice.</p>
+  </div>
+
+  <!-- DISCLAIMER CONTENT -->
+  <div class="disclaimer-content">
+
+    <p class="last-updated"><strong>Last updated:</strong> August 24, 2026</p>
+
+    <p>Unfolding Garden Life is a personal blog and online publication. The information provided on this website is for general informational and educational purposes only. We strive to keep the information accurate and up-to-date, but we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose.</p>
+
+    <div class="divider"></div>
+
+    <h2>General disclaimer</h2>
+    <p>All content on Unfolding Garden Life is published in good faith and for general information purposes only. We do not provide professional gardening, agricultural, or horticultural advice. You should not rely on the information on this website as a substitute for, nor does it replace, professional advice. Always seek the advice of a qualified expert with any questions you may have regarding gardening, plant health, soil conditions, or any other related subject.</p>
+
+    <div class="highlight-box">
+      <strong>🌱 Garden with care:</strong> Gardening practices, plant varieties, and growing conditions vary widely. What works in one garden may not work in another. Please use your own judgement and consult local experts when necessary.
+    </div>
+
+    <h2>External links disclaimer</h2>
+    <p>Our website may contain links to external websites that are not provided or maintained by us. We do not guarantee the accuracy, relevance, timeliness, or completeness of any information on these external websites. The inclusion of any links does not necessarily imply a recommendation or endorsement of the views expressed within them.</p>
+
+    <h2>Affiliate disclosure</h2>
+    <p>Unfolding Garden Life participates in affiliate marketing programs, including the Amazon Services LLC Associates Program. This means that we may earn a small commission if you make a purchase through certain links on our site, at no extra cost to you. We only recommend products and services that we genuinely believe in and that align with the values of our publication.</p>
+    <ul>
+      <li>We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com and affiliated sites.</li>
+      <li>We also partner with other carefully selected affiliate programs. All affiliate links are clearly marked or identified within the content.</li>
+      <li>These affiliate relationships do not influence our editorial content; we always provide honest and unbiased opinions.</li>
+    </ul>
+
+    <div class="highlight-box">
+      <strong>🛒 Transparency matters:</strong> If you click on an affiliate link and make a purchase, we may receive a small commission. This helps us maintain the website and continue creating high-quality content. Thank you for your support!
+    </div>
+
+    <h2>Sponsored content & advertising</h2>
+    <p>We may occasionally feature sponsored posts or advertisements on Unfolding Garden Life. Any sponsored content will be clearly identified as such. We are committed to maintaining editorial integrity and will only partner with brands that are relevant to our audience and align with our mission.</p>
+
+    <h2>Limitation of liability</h2>
+    <p>In no event shall Unfolding Garden Life, its authors, or contributors be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.</p>
+    <p>Through this website you are able to link to other websites which are not under the control of Unfolding Garden Life. We have no control over the nature, content, and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.</p>
+
+    <h2>Consent</h2>
+    <p>By using our website, you hereby consent to our disclaimer and agree to its terms.</p>
+
+    <h2>Updates</h2>
+    <p>We may update this disclaimer from time to time. We will notify you of any changes by posting the new disclaimer on this page. You are advised to review this disclaimer periodically for any changes. Changes to this disclaimer are effective when they are posted on this page.</p>
+
+    <h2>Contact</h2>
+    <p>If you have any questions about this disclaimer, please <a href="contact.html">contact us</a> or email us at <a href="mailto:privacy@unfoldinggarden.life">privacy@unfoldinggarden.life</a>.</p>
+
+    <div class="divider"></div>
+
+    <p style="font-size:0.9rem; color:#4a6048;">Thank you for reading with care and curiosity. Happy gardening!</p>
+
+  </div>
+
+  <!-- FOOTER (identical to main) -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3 style="font-family: 'Martel', serif; font-size:1.6rem;">🌿 unfolding garden</h3>
+        <p>An independent publication dedicated to the living garden. We believe in soil, seed, and the quiet labour of growth.</p>
+        <p style="margin-top:0.6rem; font-size:0.8rem;">© 2026 Unfolding Garden Life</p>
+      </div>
+      <div class="footer-col">
+        <h4>Topics</h4>
+        <a href="#">Edible gardening</a>
+        <a href="#">Soil & compost</a>
+        <a href="#">Perennials</a>
+        <a href="#">Seasonal guides</a>
+        <a href="#">Seed saving</a>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="#">Editorial policy</a>
+        <a href="#">Authors</a>
+        <a href="#">Resources</a>
+        <a href="#">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms & conditions</a>
+        <a href="cookies.html">Cookie policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>🌱 Unfolding Garden Life is a participant in the Amazon Services LLC Associates Program.</span>
+      <span>All content is for educational purposes.</span>
+      <span>Built with curiosity.</span>
+    </div>
+  </footer>
+</div>
+<!-- end site-wrap -->
+</body>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Categories — Unfolding Garden Life</title>
+  <meta name="description" content="Explore all categories of Unfolding Garden Life: edible gardening, soil, perennials, seasonal guides, seed saving, and more.">
+  <!-- Fonts & reset -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martel:wght@400;600;700;900&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    /* --- RESET & BASE --- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f6f2eb;
+      color: #1e2b2c;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      padding: 0 1.5rem;
+    }
+
+    .site-wrap {
+      max-width: 1320px;
+      margin: 0 auto;
+      background: #fcf9f5;
+      box-shadow: 0 20px 60px rgba(30, 43, 44, 0.04);
+      padding: 0 1.8rem 3rem;
+    }
+
+    /* --- TYPOGRAPHY --- */
+    h1, h2, h3, h4, .logo, .nav-link, .article-title, .section-label {
+      font-family: 'Martel', serif;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .display-heading {
+      font-family: 'Martel', serif;
+      font-weight: 900;
+      font-size: clamp(2.6rem, 8vw, 4.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #1b2f2b;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #6d7d6b;
+      border-bottom: 2px solid #d9d0c4;
+      padding-bottom: 0.3rem;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+
+    /* --- NAVIGATION --- */
+    .nav-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1.5rem 0 0.5rem;
+      border-bottom: 1px solid #e2d9cd;
+      margin-bottom: 2.5rem;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #1e3a2b;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .logo span {
+      background: #3d5e3e;
+      color: #f2eee7;
+      font-size: 1rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 40px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.2rem 1.8rem;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #2b3f32;
+      border-bottom: 2px solid transparent;
+      transition: 0.2s;
+      padding-bottom: 0.2rem;
+    }
+    .nav-links a:hover {
+      border-bottom-color: #6f8f6b;
+      color: #17331e;
+    }
+    .nav-links a.active {
+      border-bottom-color: #6f8f6b;
+      color: #17331e;
+    }
+
+    /* --- CATEGORY GRID --- */
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+      margin: 2.5rem 0 3rem;
+    }
+
+    .category-card {
+      background: #f5f0e9;
+      border-radius: 16px;
+      padding: 1.8rem 1.5rem 2rem;
+      border: 1px solid #e2d9cd;
+      transition: all 0.25s ease;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+      display: flex;
+      flex-direction: column;
+    }
+    .category-card:hover {
+      transform: translateY(-4px);
+      border-color: #b1a892;
+      box-shadow: 0 12px 24px rgba(40, 50, 30, 0.06);
+    }
+    .category-card .emoji-big {
+      font-size: 2.6rem;
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+    .category-card h3 {
+      font-family: 'Martel', serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin: 0.25rem 0 0.3rem;
+      color: #1b2f2b;
+    }
+    .category-card p {
+      font-size: 0.95rem;
+      color: #3d5540;
+      margin: 0.4rem 0 0.8rem;
+      flex: 1;
+    }
+    .category-card .tag-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.6rem;
+      margin-top: 0.6rem;
+    }
+    .category-card .tag {
+      background: #e3dbcf;
+      color: #2b402b;
+      font-size: 0.7rem;
+      padding: 0.2rem 0.9rem;
+      border-radius: 30px;
+      letter-spacing: 0.02em;
+      font-weight: 500;
+    }
+    .category-card .card-link {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #1f5a2a;
+      text-decoration: none;
+      border-bottom: 2px solid #b1c0a3;
+      align-self: flex-start;
+      transition: 0.2s;
+    }
+    .category-card .card-link:hover {
+      border-bottom-color: #1f5a2a;
+      color: #12331a;
+    }
+
+    /* feature category (big) */
+    .feature-category {
+      grid-column: 1 / -1;
+      background: #e3dbcf;
+      border-radius: 20px;
+      padding: 2rem 2.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      border: none;
+    }
+    .feature-category:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(40, 50, 30, 0.06);
+    }
+    .feature-category .feature-text {
+      flex: 2 1 260px;
+    }
+    .feature-category .emoji-big {
+      font-size: 3rem;
+    }
+    .feature-category h3 {
+      font-size: 2rem;
+    }
+    .feature-category .btn-outline {
+      background: transparent;
+      border: 2px solid #1f3822;
+      color: #1f3822;
+      padding: 0.5rem 2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.2s;
+      display: inline-block;
+    }
+    .feature-category .btn-outline:hover {
+      background: #1f3822;
+      color: #f3efe8;
+    }
+
+    /* --- HERO (categories) --- */
+    .hero-categories {
+      background: #ece6db;
+      padding: 2rem 2.5rem;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .hero-categories .hero-text {
+      flex: 2 1 240px;
+    }
+
+    /* --- FOOTER (same as original) --- */
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 2rem;
+      margin-top: 4rem;
+      padding-top: 2.5rem;
+      border-top: 2px solid #ded5c7;
+    }
+    .footer-col p {
+      color: #435a41;
+      font-size: 0.95rem;
+      max-width: 280px;
+    }
+    .footer-col h4 {
+      font-family: 'Martel', serif;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      font-size: 1.1rem;
+    }
+    .footer-col a {
+      display: block;
+      color: #3b553b;
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 0.15rem 0;
+    }
+    .footer-col a:hover {
+      color: #1d311d;
+    }
+    .footer-legal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.8rem;
+      font-size: 0.8rem;
+      margin-top: 2.2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd2c3;
+      color: #4d6249;
+    }
+
+    /* --- RESPONSIVE --- */
+    @media (max-width: 860px) {
+      .nav-wrap { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .site-wrap { padding: 0 1rem 2rem; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .hero-categories { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .feature-category { flex-direction: column; align-items: start; gap: 1rem; }
+    }
+    @media (max-width: 540px) {
+      .footer-grid { grid-template-columns: 1fr; }
+      .categories-grid { grid-template-columns: 1fr; }
+      .feature-category { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="site-wrap">
+
+  <!-- NAVIGATION (matching terms page) -->
+  <nav class="nav-wrap">
+    <a href="index.html" class="logo">🌿 Unfolding<span>Garden Life</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+      <a href="disclaimer.html">Disclaimer</a>
+      <a href="categories.html" class="active">Categories</a>
+    </div>
+  </nav>
+
+  <!-- HERO (categories) -->
+  <section class="hero-categories">
+    <div class="hero-text">
+      <span class="section-label">📂 explore</span>
+      <h1 class="display-heading" style="font-size: clamp(2.2rem, 6vw, 3.6rem);">All Categories</h1>
+      <p style="font-size: 1.1rem; color: #2d4532; max-width: 480px; margin-top: 0.4rem;">From soil to harvest — find everything you need to grow your garden and your knowledge.</p>
+    </div>
+    <div style="background: #b7aa94; width: 100px; height: 100px; border-radius: 60px; display: flex; align-items: center; justify-content: center; font-size: 3.2rem; box-shadow: 4px 8px 20px rgba(40, 50, 30, 0.08);">🌱</div>
+  </section>
+
+  <!-- CATEGORIES GRID -->
+  <div class="categories-grid">
+
+    <!-- featured category (full width) -->
+    <div class="category-card feature-category">
+      <div class="feature-text">
+        <span class="emoji-big">🌻</span>
+        <h3>Seasonal Guides</h3>
+        <p>What to plant, harvest, and care for each season. Practical advice for every climate zone.</p>
+        <div class="tag-group">
+          <span class="tag">Spring</span>
+          <span class="tag">Summer</span>
+          <span class="tag">Autumn</span>
+          <span class="tag">Winter</span>
+          <span class="tag">Zone maps</span>
+        </div>
+      </div>
+      <a href="#" class="btn-outline">Explore seasonal →</a>
+    </div>
+
+    <!-- category cards -->
+    <div class="category-card">
+      <span class="emoji-big">🥬</span>
+      <h3>Edible Gardening</h3>
+      <p>Vegetables, fruits, herbs, and edible flowers — grow your own food with confidence.</p>
+      <div class="tag-group">
+        <span class="tag">Vegetables</span>
+        <span class="tag">Fruit</span>
+        <span class="tag">Herbs</span>
+        <span class="tag">Container</span>
+      </div>
+      <a href="#" class="card-link">View articles →</a>
+    </div>
+
+    <div class="category-card">
+      <span class="emoji-big">🪱</span>
+      <h3>Soil & Compost</h3>
+      <p>Build living soil, make compost, and understand the underground ecosystem.</p>
+      <div class="tag-group">
+        <span class="tag">Composting</span>
+        <span class="tag">Worms</span>
+        <span class="tag">Mulch</span>
+        <span class="tag">pH</span>
+      </div>
+      <a href="#" class="card-link">View articles →</a>
+    </div>
+
+    <div class="category-card">
+      <span class="emoji-big">🌺</span>
+      <h3>Perennials & Pollinators</h3>
+      <p>Plants that come back year after year, and the bees, butterflies, and birds they support.</p>
+      <div class="tag-group">
+        <span class="tag">Perennials</span>
+        <span class="tag">Pollinators</span>
+        <span class="tag">Wildlife</span>
+        <span class="tag">Native plants</span>
+      </div>
+      <a href="#" class="card-link">View articles →</a>
+    </div>
+
+    <div class="category-card">
+      <span class="emoji-big">🌿</span>
+      <h3>Seed Saving</h3>
+      <p>Preserve heirloom varieties, collect seeds, and build a resilient seed bank.</p>
+      <div class="tag-group">
+        <span class="tag">Heirlooms</span>
+        <span class="tag">Dry seed</span>
+        <span class="tag">Wet seed</span>
+        <span class="tag">Storage</span>
+      </div>
+      <a href="#" class="card-link">View articles →</a>
+    </div>
+
+    <div class="category-card">
+      <span class="emoji-big">🛠️</span>
+      <h3>Garden Tools & Skills</h3>
+      <p>From pruning shears to irrigation — learn the skills and tools for every task.</p>
+      <div class="tag-group">
+        <span class="tag">Pruning</span>
+        <span class="tag">Irrigation</span>
+        <span class="tag">Hand tools</span>
+        <span class="tag">Maintenance</span>
+      </div>
+      <a href="#" class="card-link">View articles →</a>
+    </div>
+
+    <div class="category-card">
+      <span class="emoji-big">🌎</span>
+      <h3>Sustainable Living</h3>
+      <p>Gardening in harmony with nature: permaculture, water conservation, and eco-practices.</p>
+      <div class="tag-group">
+        <span class="tag">Permaculture</span>
+        <span class="tag">Water</span>
+        <span class="tag">No-till</span>
+        <span class="tag">Eco</span>
+      </div>
+      <a href="#" class="card-link">View articles →</a>
+    </div>
+
+    <div class="category-card">
+      <span class="emoji-big">🧑‍🌾</span>
+      <h3>Community & Stories</h3>
+      <p>Interviews, garden tours, and stories from gardeners around the world.</p>
+      <div class="tag-group">
+        <span class="tag">Interviews</span>
+        <span class="tag">Garden tours</span>
+        <span class="tag">Inspiration</span>
+      </div>
+      <a href="#" class="card-link">View articles →</a>
+    </div>
+
+    <div class="category-card">
+      <span class="emoji-big">📖</span>
+      <h3>Guides & How‑Tos</h3>
+      <p>Step-by-step tutorials for every level — from seed starting to harvesting.</p>
+      <div class="tag-group">
+        <span class="tag">Beginners</span>
+        <span class="tag">Advanced</span>
+        <span class="tag">DIY</span>
+        <span class="tag">Projects</span>
+      </div>
+      <a href="#" class="card-link">View articles →</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER (exactly as in terms page) -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3 style="font-family: 'Martel', serif; font-size:1.6rem;">🌿 unfolding garden</h3>
+        <p>An independent publication dedicated to the living garden. We believe in soil, seed, and the quiet labour of growth.</p>
+        <p style="margin-top:0.6rem; font-size:0.8rem;">© 2026 Unfolding Garden Life</p>
+      </div>
+      <div class="footer-col">
+        <h4>Topics</h4>
+        <a href="#">Edible gardening</a>
+        <a href="#">Soil & compost</a>
+        <a href="#">Perennials</a>
+        <a href="#">Seasonal guides</a>
+        <a href="#">Seed saving</a>
+      </div>
+      <div class="footer-col">
+        <h4>About</h4>
+        <a href="about.html">Editorial policy</a>
+        <a href="#">Authors</a>
+        <a href="#">Resources</a>
+        <a href="#">FAQ</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms & conditions</a>
+        <a href="cookies.html">Cookie policy</a>
+        <a href="disclaimer.html">Disclaimer</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+    <div class="footer-legal">
+      <span>🌱 Unfolding Garden Life is a participant in the Amazon Services LLC Associates Program.</span>
+      <span>All content is for educational purposes.</span>
+      <span>Built with curiosity.</span>
+    </div>
+  </footer>
+</div>
+<!-- end site-wrap -->
+</body>
+</html>
